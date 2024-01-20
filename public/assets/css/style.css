@@ -1,0 +1,92 @@
+.hero {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hero .background {
+  position: relative;
+  width: 1440px;
+  height: 761px;
+}
+
+.hero .text {
+  display: inline-flex;
+  flex-direction: column;
+  height: 770px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  padding: 0px 80px;
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+
+.hero .tagline {
+  display: flex;
+  width: 662px;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #fec340;
+}
+
+.hero .menyatu-dalam-aksi {
+  position: relative;
+  width: 638px;
+  margin-top: -1px;
+  margin-right: -24px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #082244;
+  font-size: 36px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.hero .subtagline {
+  position: relative;
+  width: 656px;
+  height: 68px;
+}
+
+.hero .overlap-group {
+  position: relative;
+  width: 654px;
+  height: 68px;
+}
+
+.hero .rectangle {
+  width: 626px;
+  top: 4px;
+  position: absolute;
+  height: 27px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.hero .div {
+  width: 107px;
+  top: 37px;
+  position: absolute;
+  height: 27px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.hero .bersama-mahasiswa {
+  position: absolute;
+  width: 644px;
+  top: 0;
+  left: 10px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #082244;
+  font-size: 19px;
+  letter-spacing: 0;
+  line-height: 34.2px;
+}
