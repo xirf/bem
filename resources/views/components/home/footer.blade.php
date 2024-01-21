@@ -1,18 +1,11 @@
 <style>
-    .rata-kiri {
+    .footer .rata-kiri {
         text-align: left;
-    }
-</style>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
     }
 
     .footer {
-        background-color: #333;
-        color: #fff;
+        background-color: #0c0b0c;
+        color: #9d9ea3;
         padding: 20px;
         text-align: center;
     }
@@ -32,31 +25,35 @@
         margin: 0 10px;
     }
 
-    .footer-section div {
+    .footer-section > div {
         flex: 1;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         padding: 0 10px;
     }
 
-    h3 {
+    .footer h3 {
         color: #f3c623;
         /* Warna kuning */
     }
 
-    p {
+    .footer p {
         font-size: 14px;
     }
 
-    a {
+    .footer a:not(.footer-link) {
         color: #fff;
         text-decoration: none;
         font-weight: bold;
     }
 
-    a:hover {
+    .footer a:hover {
         text-decoration: underline;
     }
 
-    h4 {
+    .footer h4 {
         border-bottom: 2px solid #f3c623;
         /* Warna kuning */
         display: inline-block;
@@ -77,35 +74,34 @@
             </p>
         </div>
         <div>
-            <h4>KONTAK</h4>
+            <h4 class="text-gray-200">KONTAK</h4>
             <p class="rata-kiri">Telp. (0352) 481124, <br>Fax : (0352) 461796,
                 <br>humas@umpo.ac.id , akademik@umpo.ac.id
             </p>
         </div>
         <div>
-            <h4>ALAMAT</h4>
-            <p class="rata-kiri">Jl. Budi Utomo No.10, Ronowijayan, Kec. Siman, Kabupaten Ponorogo, Jawa Timur 63471,<br>Indonesia</p>
+            <h4 class="text-gray-200">ALAMAT</h4>
+            <p class="rata-kiri">Jl. Budi Utomo No.10, Ronowijayan, Kec. Siman, Kabupaten Ponorogo, Jawa Timur
+                63471,<br>Indonesia</p>
         </div>
         <div>
-            <h4>SOCIAL MEDIA</h4>
-            <div class="footer-section">
-                <div class="medsos">
-                    <a href="#">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/bem_umpo/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                </div>
+            <h4 class="text-gray-200">SOCIAL MEDIA</h4>
+            <div class="flex flex-row gap-2">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/bem_umpo/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
             </div>
         </div>
     </div>
 
-    <p>&copy; 2024 BEM Umpo. All Rights Reserved. | <a href="#">Kebijakan Privasi</a></p>
+    <div class="excluded text-xs mt-12">&copy; 2024 BEM Umpo. All Rights Reserved. | <a class="footer-link" href="#">Kebijakan Privasi</a></p>
 </div>
