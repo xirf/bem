@@ -1,155 +1,109 @@
 <style>
-  body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
+    .Semua {
+        display: flex;
+        width: 100%;
+        padding: 68px 80px;
+        justify-content: space-between;
+        align-items: center;
+        background: #f26640;
+    }
 
-  .agenda-container {
-    max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-  }
+    .BEM {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
 
-  .agenda-wrapper {
-    display: flex;
-  }
+    .Judul {
+        display: flex;
+        padding: 8px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: #ffa800;
+        color: #082244;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
 
-  .agenda-item {
-    flex: 0 0 auto;
-    width: 300px;
-    padding: 20px;
-    margin-right: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+    .Teks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        width: 628px;
+        color: #fff;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 180%;
+        /* 25.2px */
+        text-transform: capitalize;
+    }
 
-  .event-title {
-    color: #333;
-  }
+    .Tombol {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #f26640;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
 
-  .event-date {
-    color: #666;
-  }
+    .Tombol {
+        display: flex;
+        padding: 16px 36px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border: 2px solid #ffffff;
+    }
 
-  .prev-button,
-  .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5em;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+    .Tombol:hover {
+        background-color: #3e8e41;
+    }
 
-  .prev-button {
-    left: 10px;
-  }
+    .Foto {
+        display: flex;
+        width: 514px;
+        height: 254px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: url(img/kegiatanMahasiswa.jpg),
+            lightgray 50% / cover no-repeat;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        object-fit: cover;
+    }
 
-  .next-button {
-    right: 10px;
-  }
+    .Foto img {
+        border-radius: 7px;
+    }
 </style>
-<div class="agenda-container">
-  <div class="agenda-wrapper">
-    <div class="agenda-item">
-      <h2 class="event-title">WISUDA KE 53</h2>
-      <p class="event-date">20 September 2022</p>
-    </div>
 
-    <div class="agenda-item">
-      <h2 class="event-title">WISUDA KE 50</h2>
-      <p class="event-date">18 Maret 2021</p>
+<div class="Semua w-full">
+    <div class="BEM">
+        <h1 class="Judul">Ayo Join BEM</h1>
+        <p class="Teks">
+            Bergabunglah Dengan Keluarga Besar BEM Universitas Muhammadiyah
+            Ponorogo. Bersama, Kita Wujudkan Transformasi, Aktivisme, Dan
+            Kepemimpinan Mahasiswa. Sambut Masa Depan Yang Lebih Baik Bersama
+            Kami!
+        </p>
+        <a class="Tombol" href="#">Daftar Sekarang</a>
     </div>
-
-    <div class="agenda-item">
-      <h2 class="event-title">
-        Seminar Prakerja Calon Wisuda Wisudawati dan Alumni
-      </h2>
-      <p class="event-date">24 Februari 2021</p>
+    <div class="Foto object-cover">
+        <img src='{{ asset('/assets/img/kegiatanMahasiswa.jpeg') }}' alt="" class="w-full h-full" />
     </div>
-
-    <div class="agenda-item">
-      <h2 class="event-title">
-        WISUDA PASCASARJANA SARJANA DAN DIPLOMA KE 49 UMPO
-      </h2>
-      <p class="event-date">61 Desember 2020</p>
-    </div>
-
-    <div class="agenda-item">
-      <h2 class="event-title">?</h2>
-      <p class="event-date">?</p>
-    </div>
-
-    <div class="agenda-item">
-      <h2 class="event-title">?</h2>
-      <p class="event-date">?</p>
-    </div>
-
-    <div class="agenda-item">
-      <h2 class="event-title">?</h2>
-      <p class="event-date">?</p>
-    </div>
-
-    <div class="agenda-item">
-      <h2 class="event-title">?</h2>
-      <p class="event-date">?</p>
-    </div>
-  </div>
-
-  <button class="prev-button" onclick="scrollAgenda(-1)">‹</button>
-  <button class="next-button" onclick="scrollAgenda(1)">›</button>
 </div>
-
-<script>
-  const agendaWrapper = document.querySelector(".agenda-wrapper");
-  const agendaItems = document.querySelectorAll(".agenda-item");
-  const prevButton = document.querySelector(".prev-button");
-  const nextButton = document.querySelector(".next-button");
-  let currentIndex = 0;
-
-  function scrollAgenda(direction) {
-    const itemWidth = agendaItems[0].offsetWidth;
-    const containerWidth = agendaWrapper.offsetWidth;
-    const maxScroll =
-      agendaItems.length - Math.floor(containerWidth / itemWidth);
-    const targetIndex = Math.min(
-      maxScroll,
-      Math.max(0, currentIndex + direction)
-    );
-    const distance = targetIndex * itemWidth - currentIndex * itemWidth;
-    const startTime = performance.now();
-    const duration = 500; // Durasi animasi dalam milidetik
-
-    function easeInOutQuad(t) {
-      return t < 0.5 ? 2 * t * t : -1 + 4 * t - 2 * t * t;
-    }
-
-    function animate(currentTime) {
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-      const easedProgress = easeInOutQuad(progress);
-      const newPosition =
-        currentIndex * itemWidth + distance * easedProgress;
-      agendaWrapper.style.transform = `translateX(${-newPosition}px)`;
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        currentIndex = targetIndex;
-      }
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  prevButton.addEventListener("click", () => scrollAgenda(-1));
-  nextButton.addEventListener("click", () => scrollAgenda(1));
-</script>
