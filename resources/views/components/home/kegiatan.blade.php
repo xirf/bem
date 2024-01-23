@@ -43,8 +43,6 @@ $contents = [
 
             <div class="absolute top-0 left-0 bg-cover bg-no-repeat w-full h-full"
                 style="background-image: url({{ $content['img'] }});">
-                >
-                >
             </div>
             <div class="absolute top-0 left-0 object-cover w-full h-full z-10 "
                 style="
