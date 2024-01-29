@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { return view('home'); });
 Route::get('/aduan', function () { return view('aduan'); });
 Route::get('/login', function () { return view('login'); });
+Route::get('/kepengurusan', function () { return view('kepengurusan'); });
+Route::get('/profil', function () { return view('profil'); });
 
 
