@@ -1,144 +1,55 @@
-<style>
-    .slider-container {
-        max-width: 800px;
-        margin: 20px auto;
-        position: relative;
-        overflow: hidden;
-    }
+@php
+    $beritaItems = [
+        [
+            'image' => 'img/eventImage1.png',
+            'title' => 'Gus Iqdam: Kita Harus Membangun Kampus yang Inspiratif',
+            'content' => 'Kehadiran sosok yang viral lewat istilah "Dekengane Pusat," Muhammad Iqdam Kholid, atau lebih dikenal sebagai Gus Iqdam, menyita perhatian ribuan peserta dari berbagai kalangan yang memenuhi Expotorium Universitas Muhammadiyah Ponorogo. Jum’at (19/1)...',
+        ],
+        [
+            'image' => 'img/eventImage1.png',
+            'title' => 'Ketua PDM Ponorogo: Kita Harus Membangun Kampus yang Inspiratif',
+            'content' => 'Ketua Pimpinan Daerah Muhammadiyah (PDM) Ponorogo, Drs. Muh Syafrudin, M.A, memberikan pandangannya tentang mengelola stres secara bijak pada acara "Pojok Dakwah: When Life Feels Empty" yang diselenggarakan mahasiswa semester 5 angkatan 2021 prodi Ilmu Komunikasi...',
+        ],
+        [
+            'image' => 'img/eventImage1.png',
+            'title' => 'Rektor UMPO: Kita Harus Membangun Kampus yang Inspiratif',
+            'content' => 'Rektor Universitas Muhammadiyah Ponorogo (UMPO), Happy Susanto, MA, memberikan apresiasi terhadap inisiatif mahasiswa program studi Ilmu Komunikasi (Ikom) Fakultas Ilmu Sosial dan Ilmu Politik (FISIP) UMPO yang telah peduli terhadap mental health atau kesehatan mental...',
+        ],
+        [
+            'image' => 'img/eventImage1.png',
+            'title' => 'Gus Iqdam: Kita Harus Membangun Kampus yang Inspiratif',
+            'content' => 'Mahasiswa Program Studi Ilmu Komunikasi (Ikom) Fakultas Ilmu Sosial dan Ilmu Politik (FISIP) Universitas Muhammadiyah Ponorogo (UMPO) semester 5 angkatan 2021 menginisiasi kegiatan Muhasabah Indonesia "Pojok Dakwah" bersama Gus...',
+        ],
+    ];
+@endphp
 
-    .slider {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .slide {
-        flex: 0 0 100%;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .slider-container img {
-        width: 100%;
-        height: auto;
-    }
-
-    .slider-container h2 {
-        color: #333;
-        margin-top: 10px;
-    }
-
-
-    .slider-container button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
-</style>
-
-{{-- 
-- 
-- Bagian ini gak perlu slider, buat aja seperti yang di figma
-- Biar gampang coba pakai for loop buat bikin card nya 
-- contoh kita bikin content nya dulu pake php
-_ $contents = [
-    [
-        'img' => 'img/gus-iqdam.png',
-        'title' => 'Bikin Terpukau Gus Iqdam Sambangi UMPO Bicara Seputar Mental Health'
-    ],
-    [
-        'img' => 'img/ketuapdm-ponorogo.png',
-        'title' => 'Kelola Stres Ala Ketua PDM Ponorogo Biar Stres Jadi Motivasi Untuk Raih Prestasi'
-    ],
-    [
-        'img' => 'img/rektor-umpo.png',
-        'title' => 'Tertekan Tapi Penuh Kejutan Ungkap Rektor UMPO Soal Mental Health Sandwich Generation'
-    ],
-    [
-        'img' => 'img/dekan-fisip.png',
-        'title' => 'Pojok Dakwah Bareng Gus Iqdam Dekan FISIP UMPO Nyatakan Sikap Ajak Gen Z Peduli Mental Health'
-    ],
-]
-
-terus di html nya 
-
-@foreach ($contents as $content)
-    <div class="slide">
-        <img src="{{ $content['img'] }}" alt="{{ $content['title'] }}">
-        <h2>{{ $content['title'] }}</h2>
+<div class="w-full px-20 py-12 grid gap-12">
+    <div class="flex w-full items-center justify-between">
+        <h2 class="text-3xl font-bold">Berita Terbaru</h2>
+        <a href="#">
+            <div class="px-4 py-2 border-2 border-black">
+                Lihat Semua
+            </div>
+        </a>
     </div>
-@endforeach
 
-biar gampang container buat vard nya buat pakai grid grid nya bisa di lihat di figma
-
--    
---}}
-<section class="slider-container">
-    <div class="slider">
-        <div class="slide">
-            <img src="img/gus-iqdam.png" alt="Gambar 1">
-            <h2>Bikin Terpukau Gus Iqdam Sambangi UMPO Bicara Seputar Mental Health</h2>
-        </div>
-        <div class="slide">
-            <img src="img/ketuapdm-ponorogo.png" alt="Gambar 2">
-            <h2>Kelola Stres Ala Ketua PDM Ponorogo Biar Stres Jadi Motivasi Untuk Raih Prestasi</h2>
-        </div>
-        <div class="slide">
-            <img src="img/rektor-umpo.png" alt="Gambar 3">
-            <h2>Tertekan Tapi Penuh Kejutan Ungkap Rektor UMPO Soal Mental Health Sandwich Generation</h2>
-        </div>
-        <div class="slide">
-            <img src="img/dekan-fisip.png" alt="Gambar 4">
-            <h2>Pojok Dakwah Bareng Gus Iqdam Dekan FISIP UMPO Nyatakan Sikap Ajak Gen Z Peduli Mental Health</h2>
-        </div>
+    <div class="w-full flex gap-8">
+        @foreach ($beritaItems as $berita)
+            <div class="w-full border-b-4 border-yellow-300 p-4 shadow-lg grid gap-4">
+                <div class="h-64 w-full rounded-md text-lg font-bold flex items-end justify-start flex-wrap p-4"
+                    style="background-image: url('{{ asset('assets/' . $berita['image']) }}'">
+                    @php
+                        // split the string by space and then make a span for each word
+                        $titleWords = explode(' ', $berita['title']);
+                    @endphp
+                    <div class="flex items-end justify-start flex-wrap gap-y-1">
+                        @foreach ($titleWords as $tw)
+                        <span class="bg-yellow-300 px-1 py-1">{{ $tw }}</span>
+                        @endforeach
+                    </div>
+                </div>
+                <p class="leading-relaxed text-lg">{{ $berita['content'] }}</p>
+            </div>
+        @endforeach
     </div>
-    <button class="prev" onclick="prevSlide()">&lt;</button>
-    <button class="next" onclick="nextSlide()">&gt;</button>
-</section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const slider = document.querySelector('.slider');
-        const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0;
-        const slideWidth = slides[0].clientWidth;
-
-        // Fungsi untuk memperbarui tampilan slider
-        function updateSlider() {
-            slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-        }
-
-        // Fungsi untuk menangani tombol "Next"
-        window.nextSlide = function() {
-            if (currentIndex < slides.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            updateSlider();
-        };
-
-        // Fungsi untuk menangani tombol "Previous"
-        window.prevSlide = function() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = slides.length - 1;
-            }
-            updateSlider();
-        };
-    });
-</script>
+</div>
