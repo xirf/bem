@@ -26,3 +26,4 @@ Route::post('/login', [login::class, 'authenticate']);
 
 // aduan use middleware
 Route::get('/aduan', [aduan::class, 'index']);
+Route::post('/aduan', [aduan::class, 'store']);
