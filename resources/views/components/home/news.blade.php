@@ -33,11 +33,11 @@
         </a>
     </div>
 
-    <div class="w-full flex gap-8">
+    <div class="w-full flex gap-10">
         @foreach ($beritaItems as $berita)
-            <div class="w-full border-b-4 border-yellow-300 p-4 shadow-lg grid gap-4">
-                <div class="h-64 w-full rounded-md text-lg font-bold flex items-end justify-start flex-wrap p-4"
-                    style="background-image: url('{{ asset('assets/' . $berita['image']) }}'">
+            <div class="w-full border-b-4 border-b-yellow-300 p-4 shadow-lg grid gap-4 border-2 border-gray-100 rounded-t-xl">
+                <div class="h-64 w-full rounded-md text-lg font-bold flex items-end justify-start flex-wrap p-4 "
+                    style="background-image: url('{{ asset('assets/' . $berita['image']) }}')">
                     @php
                         // split the string by space and then make a span for each word
                         $titleWords = explode(' ', $berita['title']);

@@ -3,7 +3,7 @@
         <div class="bg-cover w-full h-full bg-[url('{{ asset('/assets/img/bg.jpg') }}')]">
 
         </div>
-        <div class="grid place-items-center">
+        <form class="grid place-items-center" action="/login" method="POST">
             <div class="w-full max-w-xl grid gap-5">
                 <div class="grid gap-2">
                     <h1 class="text-5xl font-bold">Masuk</h1>
@@ -18,12 +18,23 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="input input-bordered input-primary">
                 </div>
-                <a href="/aduan">
-                    <button class="btn btn-primary btn-block">
-                        Masuk
-                    </button>
-                </a>
+                {{
+                    csrf_field()
+                }}
+                <!-- handle back with errors -->
+                @if ($errors->any())
+                    <div class="alert alert-error">
+                        <div class="flex-1">
+                            @foreach ($errors->all() as $error)
+                                <p>{{ $error }}</p>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
+                <button class="btn btn-primary btn-block">
+                    Masuk
+                </button>
             </div>
-        </div>
+        </form>
     </div>
 </x-layouts.default>
